@@ -161,7 +161,7 @@ class GifDialogState extends State<FancyDialog> with TickerProviderStateMixin {
             
           Container(
               height: dheight*0.15,
-              margin: EdgeInsets.only(left: theme==0 ? 0.075*dwidth : 125),//20,40
+              margin: EdgeInsets.only(left: theme==0 ? 0.075*dwidth : 0.25*dwidth),//20,40
               child: Row(
               children: <Widget>[
                 theme==0 ? customButton(cancel, cancelColor, cancelFun):flatButton(cancel, cancelColor, cancelFun),
@@ -205,7 +205,7 @@ class GifDialogState extends State<FancyDialog> with TickerProviderStateMixin {
   Widget flatButton(String t,Color c,Function f){
 
     return Container(
-      width: 0.29*dwidth,
+      width: 0.35*dwidth,
       height: 0.15*dheight,
       child: FlatButton(
         child: Text(t,style: TextStyle(color: c,fontSize: 15),),
